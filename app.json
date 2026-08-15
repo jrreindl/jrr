@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "name": "Garden Log",
+    "slug": "garden-log",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "gardenlog",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gardenlog.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Garden Log uses the camera to photograph plant labels and take progress photos of your plants.",
+        "NSPhotoLibraryUsageDescription": "Garden Log lets you attach photos from your library to your plants.",
+        "NSPhotoLibraryAddUsageDescription": "Garden Log can save plant photos to your photo library."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E9F3E5",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.gardenlog.app",
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE", "POST_NOTIFICATIONS"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-dev-client",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Garden Log uses the camera to photograph plant labels and take progress photos of your plants.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Garden Log lets you attach photos from your library to your plants.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Garden Log lets you attach photos from your library to your plants.",
+          "savePhotosPermission": "Garden Log can save a copy of plant photos to your camera roll as a backup.",
+          "isAccessMediaLocationEnabled": false,
+          "granularPermissions": ["photo"]
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#3F7D45"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
