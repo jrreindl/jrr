@@ -1,0 +1,9 @@
+[project]
+name = "oilgas-econ"
+version = "0.1.0"
+description = "Offline oil & gas prospect economics: type curves + DCF"
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

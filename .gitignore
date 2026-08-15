@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Your saved projects are personal data - kept local, not committed.
+data/projects/*.json
+!data/projects/.gitkeep
